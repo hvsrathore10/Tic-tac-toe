@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #1d1f27;
+    --text-color: #f4f4f4;
+    --board-bg-color: #3b3f4f;
+    --cell-border-color: #61dafb;
+    --button-bg-color: #61dafb;
+    --button-text-color: #282c34;
+    --button-hover-bg-color: #4fb0e3;
+    --reset-bg-color: #f44336;
+    --reset-hover-bg-color: #d32f2f;
+}
+
+body.light {
+    --bg-color: #f4f4f4;
+    --text-color: #1d1f27;
+    --board-bg-color: #ffffff;
+    --cell-border-color: #000000;
+    --button-bg-color: #61dafb;
+    --button-text-color: #282c34;
+    --button-hover-bg-color: #4fb0e3;
+    --reset-bg-color: #f44336;
+    --reset-hover-bg-color: #d32f2f;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.container {
+    text-align: center;
+    background-color: var(--board-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--button-bg-color);
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    background-color: var(--board-bg-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    background-color: var(--board-bg-color);
+    border: 2px solid var(--cell-border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    color: var(--cell-border-color);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    transform: scale(1.1);
+}
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--reset-bg-color);
+    color: var(--text-color);
+}
+
+#reset:hover {
+    background-color: var(--reset-hover-bg-color);
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
